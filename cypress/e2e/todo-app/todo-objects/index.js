@@ -17,21 +17,12 @@ export class TodoPage {
       .should('have.text', expectedTodoText);
   }
 
-  
-
-
-    // addTodo(newTodoText) {
-  //     cy
-  //         .get('[data-test=new-todo]')
-  //         .type(`${newTodoText}{enter}`)
-  // }
-
+  addTodo(newTodoText) {
+    cy.get('[data-test=new-todo]').type(`${newTodoText}{enter}`);
+  }
 
   // checkTodo(todoText) {
-  //     cy.contains(todoText)
-  //         .parent()
-  //         .find('input[type=checkbox]')
-  //         .check()
+  //   cy.contains(todoText).parent().find('input[type=checkbox]').check();
   // }
 
   // verifyTodoIsChecked(todoText) {
@@ -67,4 +58,26 @@ export class TodoPage {
   //     }
 
   // }
+
+  // practice
+
+  hoverTodo(todoText) {
+    const el = cy.contains(todoText).parent();
+    el.realHover();
+  }
+
+  verifyDestroyButtonIsVisible(todoText) {
+    cy.contains(todoText)
+      .parent()
+      .find('.destroy.todo-button')
+      .should('be.visible');
+  }
+
+  removeTodo(todoText) {
+    cy.contains(todoText).parent().find('.destroy.todo-button').invoke('show').click();
+  }
+
+  verifyItemIsRemoved(todoText) {
+    cy.contains(todoText).should('not.exist');
+  }
 }
