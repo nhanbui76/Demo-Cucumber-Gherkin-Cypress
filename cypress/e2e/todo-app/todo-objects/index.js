@@ -21,45 +21,29 @@ export class TodoPage {
     cy.get('[data-test=new-todo]').type(`${newTodoText}{enter}`);
   }
 
-  // checkTodo(todoText) {
-  //   cy.contains(todoText).parent().find('input[type=checkbox]').check();
-  // }
+  checkTodo(todoText) {
+    cy.contains(todoText).parent().find('input[type=checkbox]').check();
+  }
 
-  // verifyTodoIsChecked(todoText) {
-  //     cy.contains(todoText)
-  //         .parents('li')
-  //         .should('have.class', 'completed')
-  // }
+  verifyTodoIsChecked(todoText) {
+    cy.contains(todoText).parents('li').should('have.class', 'completed');
+  }
 
-  // clickAnchorByText(anchorText) {
-  //     cy
-  //         .get(`a:contains("${anchorText}")`)
-  //         .should('have.length', 1)
-  //         .click()
-  // }
+  clickAnchorByText(anchorText) {
+    cy.get(`a:contains("${anchorText}")`).should('have.length', 1).click();
+  }
 
-  // clickButtonByText(buttonText) {
-  //     cy
-  //         .get(`button:contains("${buttonText}")`)
-  //         .should('have.length', 1)
-  //         .click()
-  // }
+  clickButtonByText(buttonText) {
+    cy.get(`button:contains("${buttonText}")`).should('have.length', 1).click();
+  }
 
-  // verifyTextExistence(text, doesExist = true) {
-  //     if (doesExist) {
-  //         cy
-  //             .contains(text)
-  //             .should('exist')
-  //     }
-  //     else {
-  //         cy
-  //             .contains(text)
-  //             .should('not.exist')
-  //     }
-
-  // }
-
-  // practice
+  verifyTextExistence(text, doesExist = true) {
+    if (doesExist) {
+      cy.contains(text).should('exist');
+    } else {
+      cy.contains(text).should('not.exist');
+    }
+  }
 
   hoverTodo(todoText) {
     const el = cy.contains(todoText).parent();
@@ -74,7 +58,11 @@ export class TodoPage {
   }
 
   removeTodo(todoText) {
-    cy.contains(todoText).parent().find('.destroy.todo-button').invoke('show').click();
+    cy.contains(todoText)
+      .parent()
+      .find('.destroy.todo-button')
+      .invoke('show')
+      .click();
   }
 
   verifyItemIsRemoved(todoText) {

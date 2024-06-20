@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "e2e:test": "npx cypress run --spec 'cypress/e2e/**/*.feature'",
+    "all:test": "npx cypress run"
   },
   "keywords": [],
   "author": "",
