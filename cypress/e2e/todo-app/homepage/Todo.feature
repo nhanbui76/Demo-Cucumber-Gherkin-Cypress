@@ -20,7 +20,7 @@ Scenario: hover todo item
 Scenario: remove todo item
   When I hover todo item "Pay electric bill"
   And I press destroy button of todo item "Pay electric bill"
-  Then todo item "Pay electric bill" is removed
+  And todo item "Pay electric bill" is not displayed
   And I see 1 todo item displayed
 
 Scenario: check off an item as completed

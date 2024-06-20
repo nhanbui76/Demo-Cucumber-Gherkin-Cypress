@@ -26,7 +26,7 @@ export class TodoPage {
   }
 
   verifyTodoIsChecked(todoText) {
-    cy.contains(todoText).parents('li').should('have.class', 'completed');
+    cy.contains(todoText).should('have.css', 'text-decoration').and('match', /line-through/);
   }
 
   clickAnchorByText(anchorText) {
@@ -63,9 +63,5 @@ export class TodoPage {
       .find('.destroy.todo-button')
       .invoke('show')
       .click();
-  }
-
-  verifyItemIsRemoved(todoText) {
-    cy.contains(todoText).should('not.exist');
   }
 }

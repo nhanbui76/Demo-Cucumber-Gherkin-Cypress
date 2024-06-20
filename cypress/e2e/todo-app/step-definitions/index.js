@@ -31,10 +31,6 @@ When('I press destroy button of todo item {string}', (itemText) => {
   todoPage.removeTodo(itemText)
 })
 
-Then('todo item {string} is removed', (itemText) => {
-  todoPage.verifyItemIsRemoved(itemText)
-})
-
 When('I mark todo item {string} as complete', (itemToCheck) => {
   todoPage.checkTodo(itemToCheck)
 })
