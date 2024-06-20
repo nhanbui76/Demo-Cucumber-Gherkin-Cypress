@@ -50,7 +50,7 @@ export class TodoPage {
     el.realHover();
   }
 
-  verifyDestroyButtonIsVisible(todoText) {
+  verifyRemoveButtonIsVisible(todoText) {
     cy.contains(todoText)
       .parent()
       .find('.destroy.todo-button')

@@ -23,11 +23,11 @@ When('I hover todo item {string}', (itemText) => {
   todoPage.hoverTodo(itemText)
 })
 
-Then('destroy button of item {string} is visible', (itemText) => {
-  todoPage.verifyDestroyButtonIsVisible(itemText)
+Then('remove button of item {string} is visible', (itemText) => {
+  todoPage.verifyRemoveButtonIsVisible(itemText)
 })
 
-When('I press destroy button of todo item {string}', (itemText) => {
+When('I press remove button of todo item {string}', (itemText) => {
   todoPage.removeTodo(itemText)
 })
 

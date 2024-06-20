@@ -15,12 +15,12 @@ Scenario: add new todo item
 
 Scenario: hover todo item
   When I hover todo item "Pay electric bill"
-  Then destroy button of item "Pay electric bill" is visible
+  Then remove button of item "Pay electric bill" is visible
 
 Scenario: remove todo item
   When I hover todo item "Pay electric bill"
-  And I press destroy button of todo item "Pay electric bill"
-  And todo item "Pay electric bill" is not displayed
+  And I press remove button of todo item "Pay electric bill"
+  Then todo item "Pay electric bill" is not displayed
   And I see 1 todo item displayed
 
 Scenario: check off an item as completed

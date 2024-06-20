@@ -16,7 +16,7 @@ Feature: To do page with a completed task
     And todo item 1 is "Pay electric bill"
     And todo item "Walk the dog" is not displayed
 
-  Scenario: can delete all completed tasks
+  Scenario: delete all completed tasks
     When I click the "Clear completed" button
     Then I see 1 todo item displayed
     And todo item 1 is "Walk the dog"
