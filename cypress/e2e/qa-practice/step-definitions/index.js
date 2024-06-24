@@ -17,7 +17,7 @@ When('I fill in the form field with value:', (docstring) => {
 
 When('I click the {string} link', (linkTextToClick) => {
   qaPracticePage
-  .clickAnchorByText(linkTextToClick)
+  .clickByText(linkTextToClick)
 })
 
 Then('text is displayed:', (docstring) => {
