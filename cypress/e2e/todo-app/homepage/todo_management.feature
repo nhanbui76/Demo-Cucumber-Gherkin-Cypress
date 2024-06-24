@@ -64,7 +64,7 @@ Scenario: Check off an item as completed
     Then I see 1 todo item displayed
     And todo item 1 is "Walk the dog"
     And todo item "Pay electric bill" is not displayed
-    But I click the "All" link
+    But I click the "Active" link
     Then I see 1 todo item displayed
     And todo item 1 is "Walk the dog"
     But I click the "Completed" link
