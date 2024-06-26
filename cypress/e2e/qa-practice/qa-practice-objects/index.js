@@ -12,7 +12,7 @@ export class QaPracticePage {
   }
 
   enterInputValue(selector, value) {
-    cy.get(selector).type(`${value}{enter}`);
+    cy.get(selector).type(`${value}`);
   }
 
   clickByText(text) {

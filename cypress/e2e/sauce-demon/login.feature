@@ -1,7 +1,7 @@
-Feature: User Login
+Feature: Login Feature
 
   As a user of the application,
-  I want to be able to log in with my credentials,
+  I want to be able to log in with my credential,
   So that I can access my account.
 
   Background:
