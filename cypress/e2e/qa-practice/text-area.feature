@@ -9,9 +9,9 @@ Feature: Textarea
     This is the first line
     This is the second line
     """
-    And click the "Submit" button
-    Then text
+    And I click the "Submit" button
+    Then text is displayed:
     """
     This is the first line
     This is the second line
-    """ is displayed  
+    """
