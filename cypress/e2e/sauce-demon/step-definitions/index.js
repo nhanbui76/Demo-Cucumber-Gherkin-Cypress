@@ -53,3 +53,7 @@ When('I click cart icon', () => {
 Then('text {string} is displayed', (text) => {
   sauceDemonPage.verifyTextExistence(text);
 });
+
+Then('cart has {int} items', (numberOfItems) => {
+  sauceDemonPage.verifyTextMatch('[data-test="shopping-cart-badge"]', numberOfItems.toString());
+});

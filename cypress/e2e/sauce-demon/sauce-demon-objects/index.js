@@ -11,6 +11,10 @@ export class SauceDemonPage {
     }
   }
 
+  verifyTextMatch = (locator, text) => {
+    cy.get(locator).should('have.text', text);
+  }
+
   enterValueInInput(selector, value) {
     cy.get(selector).type(`${value}`);
   }
