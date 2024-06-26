@@ -12,7 +12,7 @@ When('I click the {string} button', (text) => {
 })
 
 When('I fill in the form field with value:', (docstring) => {
-  qaPracticePage.enterInputValue(docstring);
+  qaPracticePage.enterInputValue('#id_text_area', docstring);
 });
 
 When('I click the {string} link', (linkTextToClick) => {
