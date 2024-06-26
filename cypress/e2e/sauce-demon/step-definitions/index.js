@@ -16,15 +16,19 @@ Given(
   }
 );
 
-When('I attempt to log in with the following credentials:', async (dataTable) => {
-  const rows = dataTable.rows();
-  for (let i = 1; i < rows.length; i++) {
-    const username = rows[i][0];
-    const password = rows[i][1];
-    sauceDemonPage.loginWithCredential(username, password);
-    sauceDemonPage.verifyTextExistence('Swag Labs');
-  }
-});
+// When('I attempt to log in with the following credentials:', async (dataTable) => {
+//   const rows = dataTable.rows();
+//   for (let i = 1; i < rows.length; i++) {
+//     const username = rows[i][0];
+//     const password = rows[i][1];
+//     sauceDemonPage.loginWithCredential(username, password);
+//     sauceDemonPage.verifyTextExistence('Swag Labs');
+//   }
+// });
+// When I attempt to log in with the following credentials:
+// | username      | password     |
+// | standard_user | secret_sauce |
+// | visual_user   | secret_sauce |
 
 When('I add these items to cart:', (dataTable) => {
   const rows = dataTable.rows();

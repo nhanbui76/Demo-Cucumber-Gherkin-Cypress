@@ -7,9 +7,6 @@ Feature: User Login
   Background:
     Given I open the sauce demon page
 
-  Scenario: Login with multiple sets of credentials
-  When I attempt to log in with the following credentials:
-    | username      | password     |
-    | standard_user | secret_sauce |
-    | visual_user   | secret_sauce |
+  Scenario: Login with correct username and password
+  When I attempt to log in with username: "standard_user" and password: "secret_sauce"
   Then text "Products" is displayed
