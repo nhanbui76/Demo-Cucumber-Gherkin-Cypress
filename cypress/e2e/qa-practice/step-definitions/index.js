@@ -21,5 +21,5 @@ When('I click the {string} link', (linkTextToClick) => {
 })
 
 Then('text is displayed:', (docstring) => {
-  qaPracticePage.verifyTextExistence(docstring, true);
+  qaPracticePage.verifyTextExistence(docstring);
 });
